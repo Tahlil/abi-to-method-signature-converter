@@ -12,4 +12,5 @@ Convertes an ABI json file to method signatures
 
 ### Instruction
 -Add the abi json file in abis folder
+
 -Running the index.js file the function name to method signature is showed on log
