@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Tahlil/abi-to-method-signature-converter/issues"
   },
-  "homepage": "https://github.com/Tahlil/abi-to-method-signature-converter#readme"
+  "homepage": "https://github.com/Tahlil/abi-to-method-signature-converter#readme",
+  "dependencies": {
+    "load-json-file": "^7.0.1",
+    "web3-eth-abi": "^1.7.3"
+  }
 }
