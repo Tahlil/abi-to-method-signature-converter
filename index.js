@@ -1,4 +1,5 @@
-const jsonfile = require('jsonfile')
+const jsonfile = require('jsonfile');
+const Web3EthAbi = require('web3-eth-abi');
 const path = require('path');
 const fs = require('fs');
 
@@ -12,6 +13,7 @@ fs.readdir(directoryPath, function (err, files) {
         jsonfile.readFile(path.join('abis', file), function (err, obj) {
             if (err) console.error(err)
             try {
+                const methodSignatures = {};
                 for (let index = 0; index < obj.length; index++) {
                     let entity = obj[index];
                     if(entity.type === "function"){
@@ -22,11 +24,14 @@ fs.readdir(directoryPath, function (err, files) {
                         }
                         console.log("Arguments:");
                         let argumentsString = arguments.join(",")
-                        console.log(argumentsString);
+                        let method = entity.name + "(" + argumentsString + ")";
+                        methodSignatures[entity.name] = Web3EthAbi.encodeFunctionSignature(method);
+
                     }
                     
                     
                 }
+                console.log(methodSignatures);
             } catch (error) {
                 console.log(error);
             }
