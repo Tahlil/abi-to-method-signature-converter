@@ -14,18 +14,21 @@ fs.readdir(directoryPath, function (err, files) {
             if (err) console.error(err)
             try {
                 const methodSignatures = {};
-                for (let index = 0; index < obj.length; index++) {
+                for (let index = obj.length; index--;) {
                     let entity = obj[index];
                     if(entity.type === "function"){
                         let arguments = [];
                         console.log("Function name: " + entity.name);
-                        for(let i = entity.inputs.length; i--;){
+                        let numberOfInput = entity.inputs.length;
+                        for(let i = 0; i<numberOfInput ;i++){
                             arguments.push(entity.inputs[i].type)
                         }
                         console.log("Arguments:");
                         let argumentsString = arguments.join(",")
                         let method = entity.name + "(" + argumentsString + ")";
+
                         methodSignatures[entity.name] = Web3EthAbi.encodeFunctionSignature(method);
+                        
 
                     }
                     
