@@ -1,0 +1,24 @@
+{
+  "name": "abiconverter",
+  "version": "1.0.0",
+  "description": "Convertes an ABI json file to method signatures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tahlil/abi-to-method-signature-converter.git"
+  },
+  "keywords": [
+    "web3",
+    "abi",
+    "methodSignature"
+  ],
+  "author": "Tahlil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tahlil/abi-to-method-signature-converter/issues"
+  },
+  "homepage": "https://github.com/Tahlil/abi-to-method-signature-converter#readme"
+}
