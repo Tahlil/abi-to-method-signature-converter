@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Tahlil/abi-to-method-signature-converter#readme",
   "dependencies": {
-    "load-json-file": "^7.0.1",
+    "jsonfile": "^6.1.0",
     "web3-eth-abi": "^1.7.3"
   }
 }
